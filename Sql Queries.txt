@@ -1,0 +1,56 @@
+CREATE DATABASE course_db;
+
+CREATE DATABASE student_db99;
+
+SELECT * FROM course;
+
+SELECT * FROM student;
+
+--------------------------------------------
+
+IN POSTMAN:-
+
+POST -> http://localhost:8082/courses
+
+Inside the body 
+1) {
+    "id": 101,
+    "name": "Java Full Stack",
+    "trainer": "Chandan"
+}
+
+SEND 
+
+2) {
+    "id": 102,
+    "name": "Python Full Stack",
+    "trainer": "Rahul"
+}
+
+SEND 
+
+-------------------------------------------------
+
+POST -> http://localhost:8081/students
+
+1) {
+    "id": 1,
+    "name": "Rahul",
+    "email": "rahul@gmail.com",
+    "courseId": 101
+}
+
+SEND 
+
+2) {
+    "id": 2,
+    "name": "Priya",
+    "email": "priya@gmail.com",
+    "courseId": 102
+}
+
+SEND 
+
+--------------------------------------------------
+
+GET -> http://localhost:8081/students/1/details
